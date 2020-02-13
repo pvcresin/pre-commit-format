@@ -1,0 +1,21 @@
+{
+  "name": "pre-commit-format",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "husky": "4.2.3",
+    "lint-staged": "10.0.7",
+    "prettier": "1.19.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged --allow-empty"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "prettier --write"
+    ]
+  }
+}
